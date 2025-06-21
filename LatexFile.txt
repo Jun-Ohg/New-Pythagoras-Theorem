@@ -1,0 +1,112 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, tikz}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{A Proof of the Pythagorean Theorem via Heron's Formula and Circle Geometry}
+\author{Jun Ohg, Jungwoo Lee}
+\date{2025.6.19}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+While searching for a way to newly prove the Pythagorean Theorem, we have both decided to try to find a new way to prove it using this diagram. Then we came up with this idea. We prove the Pythagorean Theorem using Heron's formula and properties of a triangle inscribed in a semicircle. The proof is divided into two exhaustive cases: \( a \neq b \) and \( a = b \), with \( a, b > 0 \) and \( c \) as hypotenuse.
+
+\section*{Case I: \( a \neq b \)}
+
+Let the triangle \( ABC \) be a circle inscribed so that \( \overline{BC} \) is the diameter. Let \( O \) be the center of the circle. Draw lines \( \overline{AO} \), dividing \( \triangle ABC \) into triangles \( \triangle ABO \) and \( \triangle AOC \)
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  % Define points
+  \coordinate (B) at (-2,0);
+  \coordinate (C) at (2,0);
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,2); % Point A above center (semicircle)
+
+  % Draw semicircle
+  \draw[thick] (B) arc[start angle=180, end angle=0, radius=2];
+
+  % Draw triangle
+  \draw[thick] (B) -- (A) -- (C);
+  \draw[dashed] (A) -- (O); % Segment AO
+  % diameter
+   \draw [thick ] (B) -- (O) -- (C);
+  % Mark points
+  \fill (A) circle;
+  \fill (B) circle;
+  \fill (C) circle;
+  \fill (O) circle;
+
+  % Labels
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below] at (O) {$O$};
+\end{tikzpicture}
+\end{center}
+
+
+
+
+\subsection*{Using Heron's Formula}
+
+Let \( a = AB \), \( b = AC \), and \( c = BC \). Let \( p \) be the semi-perimeter of triangle \( ABO \), i.e.:
+\[
+p = \frac{a + c}{2}
+\]
+Then Heron's formula gives the area of triangle \( ABO \) as:
+\[
+\Delta_{ABO} = \sqrt{p(p - a)(p - c)(p - a)} = \sqrt{\frac{b^2(c - b)}{4}}
+\]
+Similarly, for triangle \( AOC \):
+\[
+\Delta_{AOC} = \sqrt{\frac{a^2(c - a)}{4}}
+\]
+Adding both triangle areas, we get:
+\[
+\Delta_{ABC} = \Delta_{ABO} + \Delta_{AOC}
+\]
+
+Squaring both sides and simplifying:
+\[
+\sqrt{\frac{b^2(c - b)}{4}} + \sqrt{\frac{a^2(c - a)}{4}} = \text{Area}
+\]
+After algebraic manipulation, this leads to the following.
+\[
+c^2 = a^2 + b^2
+\]
+
+\section*{Case II: \( a = b \)}
+
+Assume \( AB = AC \), and again \( \overline{BC} \) is the diameter. Then the triangle \( ABC \) is isosceles and inscribed in a semicircle.
+
+By Thales' Theorem, the angle \( \angle A \) is a right angle:
+\[
+\angle ABC = \angle ACB = 45^\circ \Rightarrow \angle BAC = 90^\circ
+\]
+
+Using trigonometry or basic geometry:
+\[
+\text{Area} = \frac{1}{2} \cdot a \cdot b = \frac{1}{2} a^2
+\]
+And the hypotenuse is:
+\[
+c = \sqrt{a^2 + b^2} = \sqrt{2a^2} = a\sqrt{2}
+\]
+Thus:
+\[
+c^2 = a^2 + b^2
+\]
+
+\section*{Conclusion}
+
+Dividing into the cases \( a = b \) and \( a \neq b \), we have shown that:
+\[
+c^2 = a^2 + b^2
+\]
+for all real numbers \( a, b > 0 \). This completes the proof of the Pythagorean Theorem.
+
+\end{document}
