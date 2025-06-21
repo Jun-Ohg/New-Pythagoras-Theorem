@@ -11,7 +11,7 @@ The method appears to be a novel variation not listed among well-known collectio
 ## Contents
 
 - `Pythagorean-theorem.pdf`: The complete proof in PDF format
-- 'LatexFile.txt': The File in LaTeX form
+- 'LaTeXFile.txt': The File in LaTeX form
 
 ## Background
 
