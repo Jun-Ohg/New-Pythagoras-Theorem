@@ -19,10 +19,9 @@ This work was created by two high school students interested in geometry and cla
 
 ##  Why it's interesting
 
-- Combines Thales' Circle and similarity
-- Avoids trigonometry or coordinate geometry
-- Visual and accessible to students
-- Potentially a new variation not widely known
+- A clean, geometric approach rooted in classical theorems
+- An elegant use of Heron’s Formula
+- A potentially new variation not found in common collections of Pythagorean proofs
 
 ## Feedback
 
