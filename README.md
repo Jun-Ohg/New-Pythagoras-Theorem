@@ -8,10 +8,14 @@ In this proof, a right triangle is inscribed in a circle (using Thales' Theorem)
 
 The method appears to be a novel variation not listed among well-known collections of Pythagorean proofs.
 
+After showing the initial proof to the public, I have found multiple errors in the proof. So, I have decided to attach both the original and revised version of the proof.
+
 ## Contents
 
-- `Pythagorean-theorem.pdf`: The complete proof in PDF format
+- `Pythagorean-theorem.pdf`: The complete, original proof in PDF format
+- Proof.pdf : The revised version of the proof.
 - 'LaTeXFile.txt': The File in LaTeX form
+- RevusedLaTeXFile : The revised version of the proof in LaTeX form.
 
 ## Background
 
